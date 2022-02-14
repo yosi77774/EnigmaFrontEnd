@@ -67,12 +67,12 @@ const Encryption =  () =>
     
     return(<div>
       
-  <Barcomp/>
+ <Barcomp/>
   <h3>Encryption</h3><br/>
 
   <div class="container mt-3">
 
-  <form action="#">
+  
     <div class="mb-3 mt-3">
            <label>Insert an encryption key between three letters</label><br/> 
     <input id='keys' type="text" pattern="[A-Za-z]{3}" title="Insert an encryption key between three letters" onChange={e => setText({...EncObj,keys : e.target.value})}></input> <br/>  <br/> 
@@ -84,7 +84,7 @@ const Encryption =  () =>
     </div>
     <button type="submit" onClick={submit}>Submit</button>
     
-  </form>
+
 
  <br/><h3>result:</h3><br/>
 

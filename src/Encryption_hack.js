@@ -13,8 +13,8 @@ const Hack =  () =>
     const submit = async () =>
     {
     
-        if(HacObj.Text.length<940){
-            alert("אורך הטקסט קצר כדי להבטיח תוצאות עם הסתברות טובה יותר יש לשלוח טקסט ארוך  ")
+        if(HacObj.Text.length<940&&file==null){
+            alert(" אורך הטקסט קצר, כדי להבטיח תוצאה עם הסתברות טובה יותר, יש לשלוח טקסט ארוך עם 940 תווים לפחות כדי שהתוצאה תהיה עם הסתברות סבירה למציאת המפתח ")
         }
         else{
           alert(" מערכת פעינוח הטקסט עובדת בשיטה סטטיסתית, ככל שהטקסט המוצפן יהיה ארוך, הסבירות שהתוצאה תהיה תקינה גדולה יותר ")
@@ -47,7 +47,6 @@ const Hack =  () =>
 
   <div class="container mt-3">
 
-<form action="#">
   <div class="mb-3 mt-3">
      
     <textarea class="form-control" type="text" rows="5" id="comment" onChange={e => setText({...HacObj,Text : e.target.value})} ></textarea><br/>
@@ -55,7 +54,7 @@ const Hack =  () =>
     setfile(file)} }></input><br/><br/><br/>
   </div>
   <button type="submit" onClick={submit}>Submit</button>
-</form>
+
 
 <br/><h3>Hacking key results:</h3><br/>
 {loading ? <ReacctBootSerap.Spinner animation="border" /> : null}
